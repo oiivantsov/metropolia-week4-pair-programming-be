@@ -15,10 +15,10 @@ const createUser = (req, res) => {
 };
 
 const getUserById = (req, res) => {
-  const UserId = req.params.UserId;
-  const User = User.findById(UserId);
-  if (User) {
-    res.json(User);
+  const userId = req.params.userId;
+  const user = User.findById(userId);
+  if (user) {
+    res.json(user);
   } else {
     res.status(404).json({ message: "User not found" });
   }

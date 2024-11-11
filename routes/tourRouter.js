@@ -16,6 +16,9 @@ router.use(express.json());
 // GET /tours
 router.get("/", getAllTours);
 
+const auth = require('../middleware/auth');
+router.use(auth);
+
 // POST /tours
 router.post("/", createTour);
 

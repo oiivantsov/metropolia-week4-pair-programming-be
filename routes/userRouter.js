@@ -16,6 +16,9 @@ router.use(express.json());
 // GET /Users
 router.get("/", getAllUsers);
 
+const auth = require('../middleware/auth');
+router.use(auth);
+
 // POST /Users
 router.post("/", createUser);
 
